@@ -21,6 +21,7 @@ abstract class Menu
 		return name;
 	}
 	public abstract double calcTotal();
+	public  abstract double calcTotal();
 	public abstract void displayDetails();
 }
 class Staff
@@ -73,14 +74,14 @@ class Staff
 		System.out.println();
 		double total=0.0;
 	 	System.out.printf(" %-5s%-32s%-22s%-22s%-22s%-22s%n","No","Description","Unit Price (RM)","Discount (RM)","Quantity","Total (RM)");
-	 	for(int i=0;i<orderList.size();i++)
- 		{	
-			System.out.printf("%-5s",(i+1)+".");
-			((Menu)orderList.get(i)).displayDetails();
-			System.out.printf("%15s\t\t\t  %.2f",(qtyList).get(i),(((qtyList).get(i))*(((Menu)orderList.get(i)).calcTotal())));
-			total+=(((qtyList).get(i))*(((Menu)orderList.get(i)).calcTotal()));
-			System.out.println();
- 		}
+	 		for(int i=0;i<orderList.size();i++)
+	 		{	
+				System.out.printf("%-5s",(i+1)+".");
+				((Menu)orderList.get(i)).displayDetails();
+				System.out.printf("%15s\t\t\t  %.2f",(qtyList).get(i),(((qtyList).get(i))*(((Menu)orderList.get(i)).calcTotal())));
+				total+=(((qtyList).get(i))*(((Menu)orderList.get(i)).calcTotal()));
+				System.out.println();
+	 		}
 	 	System.out.println();
 	 	System.out.println();
 	 	System.out.printf("Total Sales : RM %.2f",total);
@@ -246,13 +247,13 @@ class OrderTest
 						{
 							System.out.println("<<< Staff(s) and Order(s) Info >>>");
 						    System.out.println("\nNumber of Staffs: "+staffList.size());
-							for(int i=0;i<staffList.size();i++)
-							{
-								System.out.println("\nStaff #"+(i+1));
-								((Staff)staffList.get(i)).dispalyInfoStaff();
-							    ((Staff)staffList.get(i)).displayInfoOrder();
-							    System.out.println();
-							}
+								for(int i=0;i<staffList.size();i++)
+								{
+									System.out.println("\nStaff #"+(i+1));
+									((Staff)staffList.get(i)).dispalyInfoStaff();
+							    	((Staff)staffList.get(i)).displayInfoOrder();
+							    	System.out.println();
+								}
 						}
 						break;
 
@@ -263,9 +264,6 @@ class OrderTest
 
 				default:break;
 			}
-
-			System.out.println("I'm a happy man right now!!!");
-			System.out.println("Lagi satu");
 		}while(tasks!=6);
 	}
 }
