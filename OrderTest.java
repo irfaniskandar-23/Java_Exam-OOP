@@ -265,6 +265,7 @@ class OrderTest
 			}
 
 			System.out.println("I'm a happy man right now!!!");
+			System.out.println("Lagi satu");
 		}while(tasks!=6);
 	}
 }
