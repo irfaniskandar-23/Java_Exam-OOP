@@ -263,6 +263,8 @@ class OrderTest
 
 				default:break;
 			}
+
+			System.out.println("I'm a happy man right now!!!");
 		}while(tasks!=6);
 	}
 }
