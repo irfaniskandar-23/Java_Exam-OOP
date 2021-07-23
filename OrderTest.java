@@ -20,7 +20,6 @@ abstract class Menu
 	{
 		return name;
 	}
-	public abstract double calcTotal();
 	public  abstract double calcTotal();
 	public abstract void displayDetails();
 }
